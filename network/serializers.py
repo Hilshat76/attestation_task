@@ -19,7 +19,8 @@ class NetworkNodeSerializer(serializers.ModelSerializer):
         ]
 
     def update(self, instance, validated_data):
-        # Проверяем, пытаются ли обновить поле "debt"
+        """ Проверка на попытку обновить поле 'debt' """
+
         if "debt" in validated_data:
             raise serializers.ValidationError(
                 {"debt": "Нельзя изменять задолженность через API."}

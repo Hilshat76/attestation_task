@@ -18,9 +18,7 @@ class UserCreateAPIView(CreateAPIView):
 
         # Хешируем пароль перед сохранением
         user_data["password"] = make_password(user_data["password"])  # Хешируем пароль
-        user_data["is_active"] = (
-            False  # Устанавливаем is_active false, чтобы админ мог активировать самостоятельно
-        )
+        user_data["is_active"] = False  # Устанавливаем is_active = false, чтобы админ мог активировать самостоятельно
 
-        # Сохраняем пользователя с хешированным паролем
+        # Сохраняем пользователя
         serializer.save(**user_data)
