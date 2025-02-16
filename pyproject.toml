@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "attestation-task"
+version = "0.1.0"
+description = ""
+authors = ["Hilshat76"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.5"
+psycopg2-binary = "^2.9.10"
+pillow = "^11.1.0"
+python-dotenv = "^1.0.1"
+black = "^25.1.0"
+djangorestframework = "^3.15.2"
+django-filter = "^25.1"
+djangorestframework-simplejwt = "^5.4.0"
+django-cors-headers = "^4.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
